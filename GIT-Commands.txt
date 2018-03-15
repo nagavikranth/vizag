@@ -1,0 +1,108 @@
+1) Configure the author name and email address to be used with your commits,identify purpose
+
+git config --global user.name "user name of git" ===== git config --global user.name "nagavikranth"
+
+git config --global user.email "git mai lid"    ====== git config --global user.email "vikranthaws@gmail.com"
+
+2) How to create empty Git repository in local system..? 
+
+git init 
+
+3) How to copy of an existing remote repository in local sytem.??
+
+git clone <remote_URL> ==== git clone "https://github.com/nagavikranth/Bank.git"
+
+4) How to add Files in the git.??-----Adds files in the to the staging area for Git
+
+git add -A
+
+5) How to commit the file in the git..??---changes made to the files to a local repository
+
+git commit -m "commit message" ===== git commit -m "INC123"
+
+6) How to push the code into the git cental Repo..??
+
+git push origin master
+
+7) How to get the status of file in Git..??current state of the repository
+
+git status
+
+8) How to Viewing the Commit History..??
+
+git log
+
+9) How to Viewing the Commit History with file Name..??
+
+git log --summary
+
+10) How to connect a remote Repo.?
+
+git remote add  <remote Name>  <remote repo url>  ==== git remote add bitbucket "https://vikranthDevops@bitbucket.org/vikranthDevops/banking.git"
+
+11) How to get List named remote repositories..?
+
+git remote -v
+
+12) How to push the file to thr remote Repo..?
+
+git push  <origin of the ur Remote Repo>  master ====== git push bitbucket master
+
+13) How to get the updated changes form the central repo to the local repo..??
+
+git pull origin master
+
+14) How to remove the file in the git repo..?? Remove the files
+
+git rm  <file name> ---- git rm index.html
+
+Note:-
+after the removing the file into the loacl rpo u have to add the file and commit the file and the push the file to central repo.
+
+15) How do you get back deleted File on git..?? 
+
+git checkout  <commit message Hash code> ^1  <file name> ---- git checkout c598d53e528bc248bbcb30aed9782e7c10c2f2cd^1 index.html
+
+16) How do you revert back the last commit of the fils..?
+
+git checkout <commit message Hash code>   <file name> ---- git checkout 7afec67a197f71fbac7f3da908086705bc2f97dd code.txt
+
+17) How to Create the Branch in the git..?? add a new branch
+
+git branch  <Branch Name> ------------ git branch master2
+
+18)  How to switch the branch..??To start working in a different branch, use git checkout to switch branches.
+
+git checkout  <Branch Name> ------- git checkout master2
+
+19) How can you view the list of branches in git..??
+
+git branch
+
+20) How do you merge a different branch into your active branch..?? combines the changes from one branch to another branch
+
+git merge <branch name> ---------------- git merge master2
+
+21) How do you delete the branch..?
+
+git checkout -d <branch Name> ------- git checkout -d master2
+
+22) How to add ssh key into the git repo..??
+
+generate the ssh key and copy the public key and paste into deploy key in the git repo ie.--->  git rpo settings--> 
+left navigation click on Deploy keys----> Add deploy key --->  give the tiltle name ---> in the key paste the public key and click on Allow write access and add key
+
+after that you should active the deploy key for that run the command on git bash ----> ssh -T git@github.com
+
+now the deploy key is activited (colour changed to green)
+
+23) How to add collaborators in git hub.??
+
+go to git repo settings---> lift side navigation  click on Collaborators --->Search by username, full name or email address --->
+and click on Add Collaborators---> when ever the Collaborators accepted the request he can  do the operation commit and push
+
+24) How to troubleshoot the conflict in git..??
+
+caused by competing line changes, such as when people make different changes to the same line of the same file on  your Git repository.
+So u have do run the command i.e git pull origin master or git pull --all
+it will sync the ur cental repo to the local repo after that u have to add the file and commit the file and push the file from local repo the central repo.
